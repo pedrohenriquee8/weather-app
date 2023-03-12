@@ -1,5 +1,3 @@
-import { KEY } from "./key.js";
-
 const cityLocation = document.querySelector(".wrapper .temperature-now .location span");
 const temperatureNow = document.querySelector(".wrapper .temperature-now .temperature-measurement .temperature-celsius");
 const temperatureMax = document.querySelector(".wrapper .temperature-now .temperature-measurement .temperature-max-min p");
@@ -28,6 +26,7 @@ const sunsetTime = document.querySelector(".wrapper .additional-info .sun-time .
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
+        console.log(position.coords.latitude, position.coords.longitude)
         getData({ latitude: position.coords.latitude, longitude: position.coords.longitude });
     }, function (error) {
         switch (error.code) {
@@ -47,7 +46,7 @@ async function getData(props) {
     const { latitude, longitude } = props;
 
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${latitude},${longitude}&aqi=yes&lang=pt&days=5`);
+        const response = await fetch(`https://weather-server-es00.onrender.com/location?lat=${latitude}&long=${longitude}`);
         const data = await response.json();
         localWeatherInformation(data);
     } catch (error) {
