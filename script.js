@@ -26,7 +26,6 @@ const sunsetTime = document.querySelector(".wrapper .additional-info .sun-time .
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-        console.log(position.coords.latitude, position.coords.longitude)
         getData({ latitude: position.coords.latitude, longitude: position.coords.longitude });
     }, function (error) {
         switch (error.code) {
