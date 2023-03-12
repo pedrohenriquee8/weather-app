@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <section class="temperature-now">
+                <div class="location">
+                    <img src="./assets/map-pin.svg" alt="Map Pin Icon">
+                    <span>Rio do Sul, SC</span>
+                </div>
+
+                <div class="temperature-measurement">
+                    <p class="temperature-celsius">18</p>
+
+                    <div class="temperature-max-min">
+                        <p>22°</p>
+                        <span>16°</span>
+                    </div>
+                </div>
+
+                <div class="environment-information">
+                    <div class="item">
+                        <img src="./assets/wind.svg" alt="Wind Icon">
+                        <div class="info-item">
+                            <span>Vento</span>
+                            <p><span class="wind-velocity">17</span> km/h</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="./assets/humidity.svg" alt="Humidity Icon">
+                        <div class="info-item">
+                            <span>Umidade</span>
+                            <p><span class="humidity-percentage">31</span> %</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="./assets/rain.svg" alt="Rain Icon">
+                        <div class="info-item">
+                            <span>Chuva</span>
+                            <p><span class="rain-percentage">10</span> %</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="additional-info">
+                <section class="air-quality">
+                    <div class="air-title">
+                        <img src="./assets/leaf.svg" alt="Leaf Icon">
+                        <p>Qualidade do ar</p>
+                    </div>
+
+                    <div class="air-main">
+                        <p>Boa</p>
+                        <span>21</span>
+                    </div>
+
+                    <div class="air-info">
+                        <div class="item air-pm2_5">
+                            <span>12.9</span>
+                            <p>PM2.5</p>
+                        </div>
+
+                        <div class="item air-pm10">
+                            <span>12.9</span>
+                            <p>PM10</p>
+                        </div>
+
+                        <div class="item air-so2">
+                            <span>2.1</span>
+                            <p>sO₂</p>
+                        </div>
+
+                        <div class="item air-no2">
+                            <span>1.4</span>
+                            <p>NO₂</p>
+                        </div>
+
+                        <div class="item air-o3">
+                            <span>21.2</span>
+                            <p>O₃</p>
+                        </div>
+
+                        <div class="item air-co">
+                            <span>0.7</span>
+                            <p>CO</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sun-time">
+                    <div class="sun-title">
+                        <img src="./assets/time.svg" alt="Time Icon">
+                        <p>Horário do sol</p>
+                    </div>
+
+                    <div class="sun-main">
+                        <img src="./assets/chart.svg" alt="Time Icon">
+
+                        <div class="sunset-time">
+                            <p>06:12</p>
+                            <span>18:52</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="week-weather">
+                    <div class="item">
+                        <span class="day">Amanhã</span>
+                        <img src="" alt="">
+                        <div class="temperature-max-min">
+                            <p>22°</p>
+                            <span>16°</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="day">Amanhã</span>
+                        <img src="" alt="">
+                        <div class="temperature-max-min">
+                            <p>22°</p>
+                            <span>16°</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="day">Amanhã</span>
+                        <img src="" alt="">
+                        <div class="temperature-max-min">
+                            <p>22°</p>
+                            <span>16°</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="day">Amanhã</span>
+                        <img src="" alt="">
+                        <div class="temperature-max-min">
+                            <p>22°</p>
+                            <span>16°</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="day">Amanhã</span>
+                        <img src="" alt="">
+                        <div class="temperature-max-min">
+                            <p>22°</p>
+                            <span>16°</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./script.js" type="module"></script>
+</body>
+</html>

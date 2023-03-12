@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-additional-info: #6d67d0;
+  --background-items: rgba(102, 96, 200, 0.6);
+  --text-color: #c2bff4;
+  --text-white: #ffffff;
+  --text-additional: #dad8f7;
+  --text-item-info: #e7e6fb;
+  --text-air-quality: #87ebcd;
+
+  font-family: Lato, sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+body {
+  background-image: url("./assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  height: 30rem;
+  width: 68.125rem;
+  gap: 2rem;
+}
+
+.temperature-now {
+  display: flex;
+  flex-direction: column;
+  background-image: url("./assets/temperature-now.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 0.75rem 0.75rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.temperature-now::before {
+  content: "";
+  position: absolute;
+  background-image: url("./assets/weather.svg");
+  height: 11rem;
+  width: 11rem;
+  top: -60px;
+  left: -60px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 1.25rem;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.temperature-measurement {
+  margin-top: 3.75rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.temperature-celsius {
+  position: relative;
+  color: var(--text-white);
+  font-size: 5.5rem;
+  line-height: 6.625rem;
+}
+
+.temperature-celsius::after {
+  content: "°C";
+  position: absolute;
+  top: 17px;
+  color: var(--text-additional);
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.temperature-max-min {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.temperature-max-min p {
+  font-size: 1.25rem;
+  color: var(--text-white);
+}
+
+.temperature-max-min span {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.environment-information {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 9.5rem;
+}
+
+.environment-information .item {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  background: var(--background-items);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  gap: 0.75rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item span {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text-item-info);
+  line-height: 0.875rem;
+}
+
+.info-item p {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--text-additional);
+  line-height: 1.0625rem;
+}
+
+.info-item p span {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+.additional-info {
+  display: grid;
+  grid-template-areas:
+    "air-quality sun-time"
+    "week-weather week-weather";
+  gap: 1.5rem;
+}
+
+.air-quality {
+  grid-area: air-quality;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: var(--background-additional-info);
+  border-radius: 10px;
+  padding: 2rem 1rem 1rem;
+}
+
+.air-title,
+.sun-title {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--text-additional);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+}
+
+.air-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 700;
+}
+
+.air-main p {
+  color: var(--text-air-quality);
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+.air-main span {
+  color: var(--text-item-info);
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.air-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.air-info .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.air-info .item span {
+  color: var(--text-air-quality);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.0625rem;
+}
+
+.air-info .item p {
+  color: var(--text-item-info);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.875rem;
+  text-transform: capitalize;
+}
+
+.air-quality,
+.sun-time {
+  max-height: 15.25rem;
+}
+
+.sun-main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.sun-time {
+  grid-area: sun-time;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--background-additional-info);
+  border-radius: 10px;
+  padding: 2rem 1rem 1rem;
+}
+
+.sunset-time {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  bottom: 15px;
+  color: var(--text-white);
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
+.week-weather {
+  grid-area: week-weather;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--background-additional-info);
+  border-radius: 10px;
+  padding: 2.5rem;
+}
+
+.week-weather .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.week-weather .item span {
+  color: var(--text-additional);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  line-height: 1.0625rem;
+}
+
+.week-weather .item p {
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+}
+
+@media (max-width: 1206px) {
+  :root {
+    font-size: 75%;
+  }
+
+  main {
+    align-items: flex-start;
+  }
+
+  img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .week-weather .item img {
+    height: 5rem;
+    width: 5rem;
+  }
+  .wrapper {
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  .temperature-now {
+    width: 100%;
+  }
+
+  .environment-information {
+    margin-top: 3rem;
+  }
+
+  .temperature-now::before {
+    top: -60px;
+    left: -35px;
+    width: 14rem;
+  }
+
+  .sun-time {
+    gap: 1rem;
+  }
+
+  .sun-main img {
+    margin-top: -3rem;
+    height: 14rem;
+    width: 14rem;
+  }
+
+  .sunset-time {
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 587px) {
+  :root {
+    font-size: 50%;
+  }
+
+  main {
+    width: 95%;
+    margin: 1rem;
+  }
+
+  img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .wrapper {
+    gap: 1rem;
+  }
+
+  .air-quality {
+    padding: 1rem;
+  }
+
+  .temperature-now::before {
+    display: none;
+  }
+
+  .sun-main img {
+    height: 13rem;
+    width: 13rem;
+  }
+
+  .sunset-time {
+    bottom: 15px;
+  }
+
+  .week-weather .item img {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .additional-info {
+    display: grid;
+    grid-template-areas:
+      "air-quality"
+      "sun-time"
+      "week-weather";
+    gap: 1rem;
+  }
+
+  .week-weather {
+    height: 15rem;
+  }
+}
