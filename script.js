@@ -1,3 +1,5 @@
+import { KEY } from "./key";
+
 const cityLocation = document.querySelector(".wrapper .temperature-now .location span");
 const temperatureNow = document.querySelector(".wrapper .temperature-now .temperature-measurement .temperature-celsius");
 const temperatureMax = document.querySelector(".wrapper .temperature-now .temperature-measurement .temperature-max-min p");
@@ -30,10 +32,10 @@ if (navigator.geolocation) {
     }, function (error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                console.log("Permissão negada.");
+                alert("Permissão negada.");
                 break;
             case error.POSITION_UNAVAILABLE:
-                console.log("Posição rejeitada.");
+                alert("Posição rejeitada.");
                 break;
         }
     });
@@ -45,7 +47,7 @@ async function getData(props) {
     const { latitude, longitude } = props;
 
     try {
-        const response = await fetch(`https://weather-server-es00.onrender.com/location?lat=${latitude}&long=${longitude}`);
+        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${latitude},${longitude}&aqi=yes&lang=pt&days=5`);
         const data = await response.json();
         localWeatherInformation(data);
     } catch (error) {
