@@ -2,12 +2,6 @@
 
 Welcolme to the Weather App! This is a simple weather app based on user location built with HTML, CSS and Javascript. The main objective of this project is to apply and improve knowledge in pure technologies.
 
-## Deploy
-
-The project is deployed on Vercel. You can access by clicking the button below:
-
-[![Vercel](https://img.shields.io/badge/vercel-%2320232a.svg?style=for-the-badge&logo=vercel&logoColor=%2361DAFB)]()
-
 ## Credits
 
 This project was based on the challenge proposed by [Rocketseat](https://www.github.com/rocketseat) through its [#boraCodar](https://boracodar.dev/) event.
