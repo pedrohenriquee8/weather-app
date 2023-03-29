@@ -2,6 +2,8 @@
 
 Welcolme to the Weather App! This is a simple weather app based on user location built with HTML, CSS and Javascript. The main objective of this project is to apply and improve knowledge in pure technologies.
 
+![](weather.png)
+
 ## Deploy
 
 The project is deployed on Vercel. You can access by clicking the button below:
